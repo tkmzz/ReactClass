@@ -38,11 +38,13 @@ class Product extends Component {
         console.log(data)
         return (
             <Fragment>
-                <div className="mdl-grid">
-                    <div className="mdl-cell mdl-cell--6-col">
+                <div className="mdl-grid card">
+                    <div className="mdl-cell mdl-cell--6-col mdl-card ">
                         <img src={data.pictures[0].url} />
                     </div>
                     <div className="mdl-cell mdl-cell--6-col">
+                        <p className="itemId txt">#{data.id}</p>
+                        <p className="qtdSold txt">{data.sold_quantity} quantidades vendidas</p>
                         <h2 className="title">{data.title}</h2>
                         <h4 className="price">Preço: {data.base_price} {data.currency_id}</h4>
                         <h4 className="qtd">Quantidade: {data.available_quantity}</h4>
@@ -50,7 +52,9 @@ class Product extends Component {
                             Comprar
                         </button>
                     </div>
-                    <p>{data.description}</p>
+                    <div className="mdl-cell mdl-cell--10-col">
+                        <p>{data.description}</p>
+                    </div>
                 </div>
             </Fragment>
         )

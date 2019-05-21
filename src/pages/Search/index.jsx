@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react'
 import { Link } from 'react-router-dom'
 
 import axios from 'axios'
+import './style.css'
 
 class Search extends Component {
     constructor() {
@@ -26,25 +27,25 @@ class Search extends Component {
 
     renderItem(item) {
         return (
-            <li key={item.id}>
-                <span>{item.id}</span>
+            <p className="card" key={item.id}>
+                <img className="img" src={item.thumbnail} />
                 <span>{item.title}</span>
                 <Link
                     to={`product/${item.id}`}>
                     Mostrar produto
                 </Link>
-            </li>
+            </p>
         )
     }
 
     render() {
         return (
             <Fragment>
-                <input type="text" onChange={this.onSearch} />
+                <input type="text" className="inputStyle" onChange={this.onSearch} />
 
-                <ul>
+                <div>
                     {this.state.results.map(this.renderItem)}
-                </ul>
+                </div>
             </Fragment>
         );
     }
