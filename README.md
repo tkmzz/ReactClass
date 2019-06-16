@@ -4,12 +4,12 @@ Project created with React using the Mercadolibre API that create a list of sear
 
 ### `Used Libraries`
 
-. Axios
-. React DOM
+. Axios <br />
+. React DOM <br />
 . React Bootstrap
 
 ### `How to install and run`
 
-. npm install
-. npm start
+. npm install <br />
+. npm start <br />
 . go to http://localhost:3000/ in your browser
