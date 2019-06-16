@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react'
 import { Link } from 'react-router-dom'
+import { Image } from 'react-bootstrap'
 
 import axios from 'axios'
 import './style.css'
@@ -28,11 +29,14 @@ class Search extends Component {
     renderItem(item) {
         return (
             <p className="card" key={item.id}>
-                <img className="img" src={item.thumbnail} />
+                <Image className="imgThumb" src={item.thumbnail} thumbnail />
                 <span>{item.title}</span>
+                <span> </span>
                 <Link
                     to={`product/${item.id}`}>
-                    Mostrar produto
+                    <button className="searchButton">
+                        Mostrar produto
+                    </button>
                 </Link>
             </p>
         )

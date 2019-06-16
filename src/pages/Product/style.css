@@ -12,3 +12,8 @@
 .txt {
     color: #bebebee3
 }
+
+.centralizeAll {
+    align-items: center;
+    justify-content: center;
+}

@@ -5,9 +5,11 @@
     margin: 5px;
 }
 
-.img{
+.imgThumb{
     margin: 10px;
+    border: 1px solid #e3e3e3;
 }
+
 
 .card {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -19,3 +21,11 @@
 .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
   }
+
+.searchButton {
+    padding: 5px 12px;
+    border-radius: 4px;
+    background-color: white;
+    color: #4b4615;
+    border: 2px solid #ccbf35;
+}
